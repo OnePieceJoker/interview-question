@@ -5,12 +5,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 /**
- * ½«a.txtÎÄ¼şÖĞµÄµ¥´ÊÓëb.txtÎÄ¼şÖĞµÄµ¥´Ê½»ÌæºÏ²¢µ½c.txtÖĞ
- * a.txtÎÄ¼şÖĞµÄµ¥´ÊÓÃ»Ø³µ·û·Ö¸ô
- * b.txtÎÄ¼şÖĞÓÃ»Ø³µ»ò¿Õ¸ñ½øĞĞ·Ö¸ô
+ * å°†a.txtæ–‡ä»¶ä¸­çš„å•è¯ä¸b.txtæ–‡ä»¶ä¸­çš„å•è¯äº¤æ›¿åˆå¹¶åˆ°c.txtä¸­
+ * a.txtæ–‡ä»¶ä¸­çš„å•è¯ç”¨å›è½¦ç¬¦åˆ†éš”
+ * b.txtæ–‡ä»¶ä¸­ç”¨å›è½¦æˆ–ç©ºæ ¼è¿›è¡Œåˆ†éš”
  *
  * @author Mr.Joker
- * @date 2018Äê8ÔÂ3ÈÕ
+ * @date 2018å¹´8æœˆ6æ—¥
  * 
  * Problem-solving ideas:
  */
@@ -39,27 +39,27 @@ class FileManager {
 	String[] words = null;
 	int pos = 0;
 	public FileManager(String filename, char[] seperators) throws Exception {
-		// ´´½¨Ò»¸öFileÊµÀı
+		// create a File instance
 		File file = new File(filename);
-		// ´´½¨Ò»¸öFileReaderÊµÀı
+		// create a FileReader instance
 		FileReader reader = new FileReader(file);
-		// ´´½¨´ËÎÄ¼ş³¤¶ÈµÄ×Ö·ûÊı×é
+		// create an array of characters of the length of this file
 		char[] buf = new char[(int) file.length()];
-		// ½«×Ö·û¶ÁÈëÊı×é²¢·µ»Ø¶ÁÈ¡µÄ×Ö·ûÊı
+		// read characters into an array and return the number of characters read
 		int len = reader.read(buf);
 		String results = new String(buf, 0, len);
 		String regex = null;
-		// Æ´½ÓÕıÔò±í´ïÊ½
+		// Splicing regular expression
 		if (seperators.length > 1) {
 			regex = "" + seperators[0] + "|" + seperators[1];
 		} else {
 			regex = "" + seperators[0];
 		}
-		// ·Ö¸î×Ö·û´®
+		// Split string
 		words = results.split(regex);
 	}
 	/**
-	 * ·µ»ØÏÂÒ»¸öµ¥´Ê£¬Èç¹ûÃ»ÓĞ¾Í·µ»Ønull
+	 * Return to the next word, or null if not
 	 * @return
 	 */
 	public String nextWord() {

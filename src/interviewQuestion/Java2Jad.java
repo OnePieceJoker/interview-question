@@ -6,10 +6,11 @@ import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 
 /**
- * ½«Ä¿±êÄ¿Â¼ÏÂµÄËùÓĞÒÔ.javaÎªºó×ºÃûµÄÎÄ¼ş¸´ÖÆµ½ÁíÒ»¸öÖ¸¶¨Ä¿Â¼ÏÂ£¬²¢½«ºó×ºÃûĞŞ¸ÄÎª.jad
+ * Copy all the .java files in the target directory into the specified directory
+ * and change the suffix name to .jad
  *
  * @author Mr.Joker
- * @date 2018Äê8ÔÂ6ÈÕ
+ * @date 2018å¹´8æœˆ6æ—¥
  * 
  * Problem-solving ideas:
  */
