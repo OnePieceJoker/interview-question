@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 
 /**
- * 将指定目录下的所有以.java为后缀名的文件复制到另一个指定目录下，并将后缀名修改为.jad
+ * 将目标目录下的所有以.java为后缀名的文件复制到另一个指定目录下，并将后缀名修改为.jad
  *
  * @author Mr.Joker
  * @date 2018年8月6日
@@ -16,7 +16,7 @@ import java.io.FilenameFilter;
 public class Java2Jad {
 	
 	public static void main(String[] args) throws Exception {
-		// specified directory
+		// target directory
 		File srcDir = new File("E://myjava//lanqiaobei");
 		if (!(srcDir.exists() && srcDir.isDirectory())) {
 			throw new Exception("Error: Directory does not exist");
@@ -31,7 +31,7 @@ public class Java2Jad {
 		});
 		
 		System.out.println(files.length);
-		// target directory
+		// specified directory
 		File destDir = new File("E://myjava//destDir");
 		if (!destDir.exists()) {
 			destDir.mkdir();
