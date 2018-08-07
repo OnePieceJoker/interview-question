@@ -11,7 +11,7 @@ import java.io.FileWriter;
  *
  * @author Mr.Joker
  * @date 2018年8月6日
- * 
+ *
  * Problem-solving ideas:
  */
 public class ConsolidatedFile {
@@ -31,6 +31,7 @@ public class ConsolidatedFile {
 		while ((bWord = b.nextWord()) != null) {
 			cFileWriter.write(bWord + "\n");
 		}
+		// 测试
 		cFileWriter.close();
 	}
 }
