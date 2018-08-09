@@ -31,9 +31,10 @@ public class QuickSort {
                 i++;
             }
             while (strDate[j].compareTo(middle) > 0 && j > left) {
-                // find the number on the right that is larget than the middle value.
+                // find the number on the right that is smaller than the middle value.
                 j--;
             }
+            // Replace the large number on the left and the small number on the right.
             if (i <= j) {
               tempDate = strDate[i];
               strDate[i] = strDate[j];
